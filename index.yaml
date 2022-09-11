@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  deploy:
+  - apiVersion: v2
+    appVersion: master
+    created: "2022-09-11T21:17:39.342366481Z"
+    description: A Helm chart for Kubernetes with single Deployment
+    digest: d3d7edd8422e43e9c42827a190cec6a6bcc84443658229ec2c1425012295b380
+    name: deploy
+    type: application
+    urls:
+    - https://github.com/mini-ci-cd/k8s-github-actions/releases/download/deploy-0.1.0/deploy-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-09-11T21:17:39.342372481Z"
