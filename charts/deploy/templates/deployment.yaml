@@ -80,6 +80,12 @@ spec:
           {{- with .Values.additionalMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
+
+        {{- range $w := .Values.additionalWorkers }}
+        - image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag | default $.Chart.AppVersion }}"
+{{ toYaml $w | nindent 10 }}
+        {{- end }}
+
         {{- if .Values.fluentd_enabled }}
         - name: fluentd
           image: ghcr.io/stealthexdev/fluentd:latest
